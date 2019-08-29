@@ -5,19 +5,19 @@
   
   <title>青橙健身管理App设计总结 | Max miao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="青橙健身管理App是青橙科技旗下的一款产品，专为健身从业者打造，它整合了健身管理 SaaS 功能，方便工作人员随时随地管理健身房、跟进会员；同时还可以随时了解健身行业的新闻资讯、一对一求职招聘、参加健身会议培训等、组织全国范围内的健身赛事，连接健身行业的从业者，在这里实现健身从业的第一步！ 该产品在2016年3月开始做，2016年7月上线1.0版本，现在仍然在持续地迭代和优化。在这个产品中，我担任">
+  <meta name="description" content="秀店商家端后台，是公司的核心项目，该项目的主要目的是将集团资源整合在一起（如：将宁波秀庐供应链管理有限的进口商品渠道加入到商家端后台的GGMS模块提供给B端客户代理）。该项目核心功能主要包括店铺装修、营销推广、会员、财务等模块，并且提供iOS、安卓、小程序三端的一件生成功能。 项目背景公司战略和市场分析秀店初期的产品主要是秀店商家端后台，核心目标是帮助中小型企业、商家（B端用户）搭建属于自己的移动">
 <meta name="keywords" content="Blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="青橙健身管理App设计总结">
-<meta property="og:url" content="https://miaochenhao.github.io/2018/10/13/qc-staff-app/index.html">
+<meta property="og:url" content="https://miaochenhao.github.io/2019/08/28/show saas(copy)/index.html">
 <meta property="og:site_name" content="Max miao">
-<meta property="og:description" content="青橙健身管理App是青橙科技旗下的一款产品，专为健身从业者打造，它整合了健身管理 SaaS 功能，方便工作人员随时随地管理健身房、跟进会员；同时还可以随时了解健身行业的新闻资讯、一对一求职招聘、参加健身会议培训等、组织全国范围内的健身赛事，连接健身行业的从业者，在这里实现健身从业的第一步！ 该产品在2016年3月开始做，2016年7月上线1.0版本，现在仍然在持续地迭代和优化。在这个产品中，我担任">
+<meta property="og:description" content="秀店商家端后台，是公司的核心项目，该项目的主要目的是将集团资源整合在一起（如：将宁波秀庐供应链管理有限的进口商品渠道加入到商家端后台的GGMS模块提供给B端客户代理）。该项目核心功能主要包括店铺装修、营销推广、会员、财务等模块，并且提供iOS、安卓、小程序三端的一件生成功能。 项目背景公司战略和市场分析秀店初期的产品主要是秀店商家端后台，核心目标是帮助中小型企业、商家（B端用户）搭建属于自己的移动">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://raw.githubusercontent.com/CloverTuan/Markdown_Images/master/qc-staff/qcstaff-cover.png">
-<meta property="og:updated_time" content="2019-08-27T06:45:24.221Z">
+<meta property="og:updated_time" content="2019-08-29T12:34:37.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="青橙健身管理App设计总结">
-<meta name="twitter:description" content="青橙健身管理App是青橙科技旗下的一款产品，专为健身从业者打造，它整合了健身管理 SaaS 功能，方便工作人员随时随地管理健身房、跟进会员；同时还可以随时了解健身行业的新闻资讯、一对一求职招聘、参加健身会议培训等、组织全国范围内的健身赛事，连接健身行业的从业者，在这里实现健身从业的第一步！ 该产品在2016年3月开始做，2016年7月上线1.0版本，现在仍然在持续地迭代和优化。在这个产品中，我担任">
+<meta name="twitter:description" content="秀店商家端后台，是公司的核心项目，该项目的主要目的是将集团资源整合在一起（如：将宁波秀庐供应链管理有限的进口商品渠道加入到商家端后台的GGMS模块提供给B端客户代理）。该项目核心功能主要包括店铺装修、营销推广、会员、财务等模块，并且提供iOS、安卓、小程序三端的一件生成功能。 项目背景公司战略和市场分析秀店初期的产品主要是秀店商家端后台，核心目标是帮助中小型企业、商家（B端用户）搭建属于自己的移动">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/CloverTuan/Markdown_Images/master/qc-staff/qcstaff-cover.png">
   
   <link rel="stylesheet" href="/css/index.css">
@@ -74,19 +74,15 @@
 </nav>
     <div id="main"><section class="article">
   <h2 class="title">青橙健身管理App设计总结</h2>
-  <p class="sub">Oct 13, 2018</p>
+  <p class="sub">Aug 28, 2019</p>
   <article class="content">
-    <p>青橙健身管理App是<a href="http://qingchengfit.cn/" target="_blank" rel="noopener">青橙科技</a>旗下的一款产品，专为健身从业者打造，它整合了健身管理 SaaS 功能，方便工作人员随时随地管理健身房、跟进会员；同时还可以随时了解健身行业的新闻资讯、一对一求职招聘、参加健身会议培训等、组织全国范围内的健身赛事，连接健身行业的从业者，在这里实现健身从业的第一步！</p>
-<p>该产品在2016年3月开始做，2016年7月上线1.0版本，现在仍然在持续地迭代和优化。在这个产品中，我担任交互和视觉设计师，负责80%的设计工作，1.0版本全部由我独立负责，完整地参与整个项目周期。您也可以在这里观看：<a href="https://www.behance.net/gallery/71708425/AppAn-App-for-fitness-practitioner" target="_blank" rel="noopener">On Behance</a> | <a href="https://www.zcool.com.cn/work/ZMzEyMDgzNjA=.html" target="_blank" rel="noopener">On Zcool</a> | <a href="https://dribbble.com/shots/5504183-An-App-for-fitness-practitioner" target="_blank" rel="noopener">On Dribbble</a> </p>
-<h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><p><strong>公司战略和市场分析</strong></p>
-<p>青橙在创业初期的主要产品「青橙健身房管理系统」是一款Web端的 SaaS 产品，青橙一直把业务聚焦在B端客户——即健身房上，而随着时间的累积，这个市场将会越来越趋向饱和，而每个健身房包含多名教练、管理者等健身从业者，且随着健身风潮的流行、人们消费能力的升级，健身从业者也在不断增加，因此在这个阶段青橙思考将目标用户从「健身房」这个团体转向「健身从业者」的个体，扩大用户群体，发掘更大的市场，尝试更多能满足健身从业者需求的业务，探索更多的可能性。</p>
-<p>另一方面，通过调研我们了解到，市场上针对「健身房从业者」这一范畴用户的产品比较少，大多数产品的用户都是单一角色，如教练或销售，这就导致健身从业人群都是分散的，而青橙正好可以利用已经积累的B端资源，以健身房管理系统为切入点，将健身从业者聚集起来，打造健身从业者的平台，进而实现更多的价值。</p>
-<p><strong>产品目标</strong></p>
-<p>以健身房管理系统为切入点，打造一个健身从业者的平台，健身从业者的聚集地。</p>
-<p><img src="https://raw.githubusercontent.com/CloverTuan/Markdown_Images/master/qc-staff/staffapp-01.jpg" alt></p>
+    <p>秀店商家端后台，是公司的核心项目，该项目的主要目的是将集团资源整合在一起（如：将宁波秀庐供应链管理有限的进口商品渠道加入到商家端后台的GGMS模块提供给B端客户代理）。该项目核心功能主要包括店铺装修、营销推广、会员、财务等模块，并且提供iOS、安卓、小程序三端的一件生成功能。</p>
+<h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><h5 id="公司战略和市场分析"><a href="#公司战略和市场分析" class="headerlink" title="公司战略和市场分析"></a>公司战略和市场分析</h5><p>秀店初期的产品主要是秀店商家端后台，核心目标是帮助中小型企业、商家（B端用户）搭建属于自己的移动社交电商平台，随着时间的推移，集团资源不断整合、将一些进口商品加入到其中，提供给B端用户进行代理、分销。</p>
+<h5 id="产品目标"><a href="#产品目标" class="headerlink" title="产品目标"></a>产品目标</h5><p>信用互联 价值共享 让你没有难做的生意。</p>
 <h2 id="我的角色"><a href="#我的角色" class="headerlink" title="我的角色"></a>我的角色</h2><p>在这个产品中，我独立负责1.0版本的所有交互与视觉设计工作，参与产品讨论，整理产品需求，梳理用户核心流程，设计产品的页面布局和信息框架，输出视觉稿，与产品经理、工程师协作让方案落地。</p>
 <p><img src="https://raw.githubusercontent.com/CloverTuan/Markdown_Images/master/qc-staff/staffapp-02.jpg" alt></p>
-<h2 id="目标用户和需求分析"><a href="#目标用户和需求分析" class="headerlink" title="目标用户和需求分析"></a>目标用户和需求分析</h2><p>一个传统健身房里通常包含管理者、教练、前台、会籍顾问等多个角色，各个角色的工作范围和需求有所不同，我们要提供什么样的服务来满足各个健身从业者的需求？通过用户访谈和用户观察，我们整理了不同角色用户日常的工作内容和需求，我们可以把这些需求大致分为两类：健身房办公需求、个人职业发展需求。</p>
+<h2 id="色彩规范"><a href="#色彩规范" class="headerlink" title="色彩规范"></a>色彩规范</h2><h5 id="产品定位角度"><a href="#产品定位角度" class="headerlink" title="产品定位角度"></a>产品定位角度</h5><p>在该项目中对于主色调的选择做了很多的尝试，从各个角度的考虑最终决定使用更加明快、清爽、商务一些的蓝色为主色调。</p>
+<h5 id="用户使用角度"><a href="#用户使用角度" class="headerlink" title="用户使用角度"></a>用户使用角度</h5><p>考虑到该后台的用户使用时间长、注意力集中，为避免用户在高集中力长时间使用对眼部的刺激，所以后台采用对眼部刺激较小蓝色为主色调，并配深灰和浅灰、低饱和度的颜色为辅助色。</p>
 <p><img src="https://raw.githubusercontent.com/CloverTuan/Markdown_Images/master/qc-staff/staffapp-03.jpg" alt></p>
 <h2 id="设计目标"><a href="#设计目标" class="headerlink" title="设计目标"></a>设计目标</h2><p>站在设计的角度，从产品目标和关键词推导设计目标，为了打造健身从业者的聚集地，就必然需要兼顾健身行业中各个角色的需求，当然为了公司盈利，还需要吸引场馆完成付费。</p>
 <p><img src="https://raw.githubusercontent.com/CloverTuan/Markdown_Images/master/qc-staff/staffapp-13.jpg" alt></p>
@@ -119,10 +115,10 @@
   </article>
   <footer class="f-cf">
     
-      <a href="/2019/08/28/show saas(copy)/" class="link f-fl">⟵青橙健身管理App设计总结</a>
+      <a href="/2019/08/28/show saas/" class="link f-fl">⟵Show店商家端后台（toB SaaS）</a>
     
     
-      <a href="/2018/10/11/material-design/" class="link f-fr">Material Design 新知⟶</a>
+      <a href="/2018/10/13/qc-staff-app/" class="link f-fr">青橙健身管理App设计总结⟶</a>
     
   </footer>
 </section></div>
