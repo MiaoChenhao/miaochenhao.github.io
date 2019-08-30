@@ -243,15 +243,15 @@ body {
   .article > .content {
     padding-bottom: 64px; }
     .article > .content h2, .article > .content h3, .article > .content h4, .article > .content h5 {
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 600;
       line-height: 40px;
       margin-bottom: 15px; }
     .article > .content h1 {
-      font-size: 34px;
+      font-size: 24px;
       font-weight: 600;
       line-height: 40px;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       border-bottom: 1px solid #eee; }
     .article > .content p {
       font-size: 16px;
