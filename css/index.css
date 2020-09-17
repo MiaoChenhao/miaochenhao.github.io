@@ -179,7 +179,7 @@ body {
       line-height: 40px; }
       .project-card > .ctnWrap > .title:hover {
         opacity: 1;
-        color: #0201FF; }
+        color: #f0534e; }
     .project-card > .ctnWrap > .desc {
       font-size: 16px;
       line-height: 30px;
@@ -229,11 +229,11 @@ body {
   margin: 64px 0 80px;
   padding: 80px 100px 0;
   background-color: white;
-  color: #0f0f11;
+  color: #333;
   font-size: 16px;
   line-height: 30px; }
   .article > .title {
-    font-size: 48px;
+    font-size: 28px;
     line-height: 40px;
     margin-bottom: 10px;
     font-weight: 600; }
@@ -250,7 +250,7 @@ body {
     .article > .content h1 {
       font-size: 34px;
       font-weight: 600;
-      line-height: 90px;
+      line-height: 40px;
       margin-bottom: 15px;
       border-bottom: 1px solid #eee; }
     .article > .content p {
@@ -287,7 +287,7 @@ body {
           border-radius: 100%;
           background-color: #444; }
     .article > .content a {
-      color: #0201FF; }
+      color: #f0534e; }
     .article > .content strong {
       font-weight: 600; }
     .article > .content figure > img {
