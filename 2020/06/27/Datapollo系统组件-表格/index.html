@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Datapollo组件设计—表格 | Max miao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Datapollo数据中台项目的底层基础组件使用Ant Design ，她是一个非常优秀的企业级产品的设计体系 ，几乎可以满足大多数中后台系统的设计要求，她秉承基于「自然」、「确定性」、「意义感」、「生长性」四大设计价值观，通过模块化解决方案，降低冗余的生产成本，让设计者专注于更好的用户体验。 对于Datapollo来说也能很大程度上满足了我们的使用需求，让我们能够快速高效的搭建系统。 但是，在D">
+<meta name="keywords" content="Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Datapollo组件设计—表格">
+<meta property="og:url" content="https://miaochenhao.github.io/2020/06/27/Datapollo系统组件-表格/index.html">
+<meta property="og:site_name" content="Max miao">
+<meta property="og:description" content="Datapollo数据中台项目的底层基础组件使用Ant Design ，她是一个非常优秀的企业级产品的设计体系 ，几乎可以满足大多数中后台系统的设计要求，她秉承基于「自然」、「确定性」、「意义感」、「生长性」四大设计价值观，通过模块化解决方案，降低冗余的生产成本，让设计者专注于更好的用户体验。 对于Datapollo来说也能很大程度上满足了我们的使用需求，让我们能够快速高效的搭建系统。 但是，在D">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://pic.downk.cc/item/5f68708f160a154a677b58ed.png">
+<meta property="og:updated_time" content="2020-09-21T09:46:48.770Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Datapollo组件设计—表格">
+<meta name="twitter:description" content="Datapollo数据中台项目的底层基础组件使用Ant Design ，她是一个非常优秀的企业级产品的设计体系 ，几乎可以满足大多数中后台系统的设计要求，她秉承基于「自然」、「确定性」、「意义感」、「生长性」四大设计价值观，通过模块化解决方案，降低冗余的生产成本，让设计者专注于更好的用户体验。 对于Datapollo来说也能很大程度上满足了我们的使用需求，让我们能够快速高效的搭建系统。 但是，在D">
+<meta name="twitter:image" content="https://pic.downk.cc/item/5f68708f160a154a677b58ed.png">
+  
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">Miao Duang</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+        
+          
+            <a href="https://dribbble.com/MiaoDuang" target="_blank" class="nav-icn iconfont icon-dribbble"></a>
+          
+        
+          
+            <a href="https://www.behance.net/1769627227868a2" target="_blank" class="nav-icn iconfont icon-behance"></a>
+          
+        
+          
+            <a href="https://my.zcool.com.cn/works" target="_blank" class="nav-icn iconfont icon-zcool"></a>
+          
+        
+          
+        
+          
+        
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">PROJECT</a>
+          
+        
+            <a href="http://www.wulihub.com.cn/go/Jm83mQ/index.html" class="nav-menu ">WORKS</a>
+          
+        
+            <a href="/about" class="nav-menu ">ABOUT</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">Datapollo组件设计—表格</h2>
+  <p class="sub">Jun 27, 2020</p>
+  <article class="content">
+    <p>Datapollo数据中台项目的底层基础组件使用Ant Design ，她是一个非常优秀的企业级产品的设计体系 ，几乎可以满足大多数中后台系统的设计要求，她秉承基于「自然」、「确定性」、「意义感」、「生长性」四大设计价值观，通过模块化解决方案，降低冗余的生产成本，让设计者专注于更好的用户体验。</p>
+<p>对于Datapollo来说也能很大程度上满足了我们的使用需求，让我们能够快速高效的搭建系统。</p>
+<p>但是，在Datapollo中有一些有特殊功能的组件还是不能够满足，所以需要我们结合Ant Design的基础组件设计来创造属于Datapollo专属的功能组件。</p>
+<h1 id="Table-表格"><a href="#Table-表格" class="headerlink" title="Table 表格"></a>Table 表格</h1><p>对于Datapollo用户而言，来后台主要目的之一就是对数据进行查阅和操作，而表格做为结构化数据的载体，承载了数据的保存、展示、对比分析、排序、筛选 、搜索等功能。</p>
+<p>因此表格的易读性和易操作性设计对于提升Datapollo用户的操作效率有着举足轻重的作用。</p>
+<p><strong>Datapollo的表格由内外两部分组成：</strong></p>
+<ul>
+<li>内部，由表头、表体、表尾共3 部份组成。</li>
+<li>外部，由搜索、筛选、相关命令按钮、分页等构成。</li>
+</ul>
+<p>在设计上Datapollo的表格采用最简洁的设计风格，去掉了纵向的分割线</p>
+<p><img src="https://pic.downk.cc/item/5f676c9b160a154a670d5d5e.png" alt></p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>Datapollo的表格主要分为查看和编辑两个状态</p>
+<p><strong>查看状态</strong></p>
+<p>查看状态列表分为有编辑功能、无编辑功能两种</p>
+<p>无编辑功能（eg：最近浏览、搜索结果）</p>
+<ol>
+<li>排序（单行排序、组合排序）、清除排序</li>
+<li>选择、全选</li>
+<li>删除</li>
+<li>隐藏、显示全部</li>
+<li>拖拽列宽</li>
+<li>操作：查看详情、更多操作</li>
+<li>帮助</li>
+</ol>
+<p>有编辑功能（eg：详情页子表）</p>
+<ol>
+<li>排序（单行排序、组合排序）、清除排序</li>
+<li>隐藏、显示全部</li>
+<li>拖拽列宽</li>
+<li>操作：查看详情、更多操作</li>
+<li>帮助</li>
+</ol>
+<p>​     此类列表选择和删除功能仅在编辑状态下可用</p>
+<p><strong>编辑状态</strong></p>
+<p>当进入编辑状态时列表顺序恢复初始顺序且不可排序（单行排序、组合排序）</p>
+<ol>
+<li>选择、全选</li>
+<li>删除</li>
+<li>拖拽排序</li>
+<li>隐藏、显示全部</li>
+<li>拖拽列宽</li>
+<li>保存、取消</li>
+<li>操作：编辑、更多操作</li>
+<li>帮助</li>
+</ol>
+<h2 id="列款设定"><a href="#列款设定" class="headerlink" title="列款设定"></a>列款设定</h2><p><img src="https://pic.downk.cc/item/5f676daa160a154a670ddad5.png" alt></p>
+<h2 id="交互说明"><a href="#交互说明" class="headerlink" title="交互说明"></a>交互说明</h2><p><img src="https://pic.downk.cc/item/5f676daa160a154a670ddad1.png" alt></p>
+<p><img src="https://pic.downk.cc/item/5f676e4c160a154a670e2b25.png" alt></p>
+<p><img src="http://tva1.sinaimg.cn/large/007X8olVly1g6iv3zgbs0g30yu05wgns.gif" alt></p>
+
+  </article>
+  <footer class="f-cf">
+    
+      <a href="/2020/06/28/Datapollo数据中台/" class="link f-fl">⟵Datapollo数据中台</a>
+    
+    
+      <a href="/2020/06/22/Datapollo系统组件-搜索帮助/" class="link f-fr">Datapollo组件设计—搜索帮助⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  17696272278@163.com
+  
+    
+      
+        · <a href="https://dribbble.com/MiaoDuang" target="_blank" class="nav-icn">Dribbble</a>
+      
+    
+      
+        · <a href="https://www.behance.net/1769627227868a2" target="_blank" class="nav-icn">Behance</a>
+      
+    
+      
+        · <a href="https://my.zcool.com.cn/works" target="_blank" class="nav-icn">Zcool</a>
+      
+    
+      
+    
+      
+    
+  
+  <span class="copyright">All rights reserved @Miao Duang</span>
+</footer>
+  </div>
+</body>
+</html>
